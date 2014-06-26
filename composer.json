@@ -1,0 +1,11 @@
+{
+    "require": {
+        "phpunit/phpunit": "4.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sample3\\": "Sample3/class/",
+            "Sample4\\": "Sample4/class/"
+        }
+    }
+}

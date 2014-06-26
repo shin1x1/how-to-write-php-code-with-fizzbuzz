@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit colors="true" bootstrap="bootstrap.php">
+    <testsuite name="Sample1">
+        <directory>Sample1/test</directory>
+    </testsuite>
+    <testsuite name="Sample2">
+        <directory>Sample2/test</directory>
+    </testsuite>
+    <testsuite name="Sample3">
+        <directory>Sample3/test</directory>
+    </testsuite>
+    <testsuite name="Sample4">
+        <directory>Sample4/test</directory>
+    </testsuite>
+</phpunit>
