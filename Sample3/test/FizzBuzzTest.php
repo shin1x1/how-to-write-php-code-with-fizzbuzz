@@ -26,7 +26,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function render()
     {
         $this->expectOutputString(EXPECTED_FIZZBUZZ_OUTPUT);
-        $this->sut->render();
+        $this->sut->execute();
     }
 
     /**

@@ -7,13 +7,9 @@ namespace Sample4;
 class FizzBuzz
 {
     /**
-     * @var integer
+     * @var array
      */
-    protected $start;
-    /**
-     * @var integer
-     */
-    protected $end;
+    protected $inputs;
     /**
      * @var Evaluable
      */
@@ -24,15 +20,13 @@ class FizzBuzz
     protected $renderer;
 
     /**
-     * @param integer $start
-     * @param integer $end
+     * @param array $inputs
      * @param Evaluable $evaluator
      * @param Renderable $renderer
      */
-    public function __construct($start, $end, Evaluable $evaluator, Renderable $renderer)
+    public function __construct(array $inputs, Evaluable $evaluator, Renderable $renderer)
     {
-        $this->start = $start;
-        $this->end = $end;
+        $this->inputs = $inputs;
         $this->evaluator = $evaluator;
         $this->renderer = $renderer;
     }
@@ -40,9 +34,9 @@ class FizzBuzz
     /**
      *
      */
-    public function render()
+    public function execute()
     {
-        for ($i = $this->start; $i <= $this->end; $i++) {
+        foreach ($this->inputs as $i) {
             $value = $this->evaluator->evaluate($i);
             $this->renderer->render($value);
         }

@@ -22,11 +22,20 @@ class FizzBuzz
     /**
      *
      */
-    public function render()
+    public function execute()
     {
-        foreach ($this->inputs as $v) {
-            echo $this->evaluate($v) . PHP_EOL;
+        foreach ($this->inputs as $i) {
+            $output = $this->evaluate($i);
+            $this->render($output);
         }
+    }
+
+    /**
+     * @param string $output
+     */
+    public function render($output)
+    {
+        echo $output . PHP_EOL;
     }
 
     /**

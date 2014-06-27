@@ -1,5 +1,5 @@
 <?php
-function get_fizzbuzz($i) {
+function fizzbuzz($i) {
     if ($i % 3 === 0 && $i % 5 === 0) {
         return 'FizzBuzz';
     } else if ($i % 3 === 0) {
@@ -11,6 +11,11 @@ function get_fizzbuzz($i) {
     }
 }
 
+function render($output) {
+    echo $output . PHP_EOL;
+}
+
 for ($i = 1; $i <= 20; $i++) {
-    echo get_fizzbuzz($i) . PHP_EOL;
+    $output = fizzbuzz($i);
+    render($output);
 }

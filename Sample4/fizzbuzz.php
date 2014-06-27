@@ -5,8 +5,9 @@ use Sample4\FizzBuzz;
 use Sample4\FizzBuzzEvaluator;
 use Sample4\EchoRenderer;
 
+$inputs = range(1, 20);
 $evaluator = new FizzBuzzEvaluator();
 $renderer = new EchoRenderer();
 
-$fizzbuzz = new FizzBuzz(1, 20, $evaluator, $renderer);
-$fizzbuzz->render();
+$fizzbuzz = new FizzBuzz($inputs, $evaluator, $renderer);
+$fizzbuzz->execute();
