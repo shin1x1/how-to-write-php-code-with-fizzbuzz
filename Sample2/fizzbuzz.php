@@ -1,5 +1,5 @@
 <?php
-function fizzbuzz($i) {
+function evaluate($i) {
     if ($i % 3 === 0 && $i % 5 === 0) {
         return 'FizzBuzz';
     } else if ($i % 3 === 0) {
@@ -16,6 +16,6 @@ function render($output) {
 }
 
 for ($i = 1; $i <= 20; $i++) {
-    $output = fizzbuzz($i);
+    $output = evaluate($i);
     render($output);
 }

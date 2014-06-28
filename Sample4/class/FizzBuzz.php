@@ -34,7 +34,7 @@ class FizzBuzz
     /**
      *
      */
-    public function execute()
+    public function publish()
     {
         foreach ($this->inputs as $i) {
             $value = $this->evaluator->evaluate($i);

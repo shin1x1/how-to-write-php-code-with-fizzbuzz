@@ -10,4 +10,4 @@ $evaluator = new FizzBuzzEvaluator();
 $renderer = new EchoRenderer();
 
 $fizzbuzz = new FizzBuzz($inputs, $evaluator, $renderer);
-$fizzbuzz->execute();
+$fizzbuzz->publish();

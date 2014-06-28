@@ -7,24 +7,30 @@ namespace Sample3;
 class FizzBuzz
 {
     /**
-     * @var array
+     * @var integer
      */
-    protected $inputs;
+    protected $start;
+    /**
+     * @var integer
+     */
+    protected $end;
 
     /**
-     *
+     * @param integer $start
+     * @param integer $end
      */
-    public function __construct(array $inputs)
+    public function __construct($start, $end)
     {
-        $this->inputs = $inputs;
+        $this->start = $start;
+        $this->end = $end;
     }
 
     /**
      *
      */
-    public function execute()
+    public function publish()
     {
-        foreach ($this->inputs as $i) {
+        for ($i = $this->start ; $i <= $this->end ; $i++) {
             $output = $this->evaluate($i);
             $this->render($output);
         }

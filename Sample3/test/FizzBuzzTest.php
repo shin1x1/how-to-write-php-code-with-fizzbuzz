@@ -17,7 +17,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $this->sut = new FizzBuzz(range(1, 20));
+        $this->sut = new FizzBuzz(1, 20);
     }
 
     /**
@@ -26,7 +26,7 @@ class FizzBuzzTest extends \PHPUnit_Framework_TestCase
     public function render()
     {
         $this->expectOutputString(EXPECTED_FIZZBUZZ_OUTPUT);
-        $this->sut->execute();
+        $this->sut->publish();
     }
 
     /**
